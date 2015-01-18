@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"testing"
 )
 
@@ -29,6 +30,6 @@ func TestSelf(t *testing.T) {
 		}
 
 		fmt.Println(fi.Name(), fi.Size(), fi.Mode(), fi.ModTime(), fi.IsDir())
-		Discard(r)
+		io.Copy(ioutil.Discard, r)
 	}
 }

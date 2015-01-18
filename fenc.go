@@ -3,7 +3,6 @@ package fenc
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"time"
 )
@@ -93,8 +92,4 @@ func (d *Decoder) Decode() (ofi os.FileInfo, r io.Reader, err error) {
 		return nil, nil, err
 	}
 	return &fi, io.LimitReader(d.r, fi.size), nil
-}
-
-func Discard(r io.Reader) {
-	io.Copy(ioutil.Discard, r)
 }
