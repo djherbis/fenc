@@ -1,7 +1,5 @@
-fenc
+fenc [![GoDoc](https://godoc.org/github.com/djherbis/fenc?status.svg)](https://godoc.org/github.com/djherbis/fenc)
 ======
-
-Documentation: http://godoc.org/github.com/djherbis/fenc
 
 Usage
 -----
